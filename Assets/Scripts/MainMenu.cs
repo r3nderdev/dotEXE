@@ -11,8 +11,7 @@ public class MainMenu : MonoBehaviour
 
 
     [Header("Values")]
-    [SerializeField] float uiFadeDuration;
-
+    [SerializeField] private float levelloadDelay;
     private void Start()
     {
 
@@ -31,7 +30,6 @@ public class MainMenu : MonoBehaviour
         Screen.SetResolution(1280, 720, true);
 
         StartCoroutine(FadeOut());
-
     }
 
 
@@ -40,21 +38,21 @@ public class MainMenu : MonoBehaviour
     {
         float elapsedTime = 0f;
 
-        while (elapsedTime < uiFadeDuration)
+        while (elapsedTime < 0.7f)
         {
             elapsedTime += Time.deltaTime;
 
             foreach (TMP_Text text in buttonTexts)
             {
                 Color textColor = text.color;
-                textColor.a = Mathf.Lerp(1, 0, elapsedTime / uiFadeDuration);
+                textColor.a = Mathf.Lerp(1, 0, elapsedTime / 0.7f);
                 text.color = textColor;
             }
 
             yield return null;
         }
 
-        levelLoader.LoadNextLevel(1.8f, 1);
+        levelLoader.LoadNextLevel(levelloadDelay, 1);
     }
 
 
