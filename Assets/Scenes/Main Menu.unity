@@ -154,6 +154,8 @@ MonoBehaviour:
   useTargetFPS: 0
   targetFrameRate: 60
   setResolution: 0
+  width: 1280
+  height: 720
 --- !u!4 &61020141
 Transform:
   m_ObjectHideFlags: 0

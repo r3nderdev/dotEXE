@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class InitializeGraphics : MonoBehaviour
 {
+    [Header("FPS")]
     [SerializeField] private bool useTargetFPS = false;
-    [SerializeField] private int targetFrameRate;
-    [SerializeField] private bool setResolution = false;
+    [SerializeField] private int targetFrameRate = 60;
+
+    [Header("Resolution")]
+    [SerializeField] private bool useResolution = false;
+    [SerializeField] private int width = 1280, height = 720;
 
 
     private void Awake()
@@ -14,6 +18,6 @@ public class InitializeGraphics : MonoBehaviour
         if (useTargetFPS) Application.targetFrameRate = targetFrameRate;
         else if (!useTargetFPS) Application.targetFrameRate = -1; // Platform default
 
-        if (setResolution) Screen.SetResolution(1280, 720, true);
+        if (useResolution) Screen.SetResolution(width, height, true);
     }
 }
