@@ -13,11 +13,11 @@ public class InitializeGraphics : MonoBehaviour
     [SerializeField] private int width = 1280, height = 720;
 
 
-    private void Awake()
+    private void Start()
     {
         if (useTargetFPS) Application.targetFrameRate = targetFrameRate;
         else if (!useTargetFPS) Application.targetFrameRate = -1; // Platform default
 
-        if (useResolution) Screen.SetResolution(width, height, true);
+        if (useResolution) Screen.SetResolution(width, height, false);
     }
 }

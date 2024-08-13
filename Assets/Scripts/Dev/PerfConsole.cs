@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 
-public class DebugConsole : MonoBehaviour
+public class PerfConsole : MonoBehaviour
 {
     private TMP_Text consoleText; 
     private List<string> logMessages = new List<string>();
@@ -25,12 +25,19 @@ public class DebugConsole : MonoBehaviour
 
     void LogMessage(string logString, string stackTrace, LogType type)
     {
-        logMessages.Add(logString);
-        UpdateConsoleText();
+        consoleText.text = logString;
+        //logMessages.Add(logString);
+        //UpdateConsoleText();
+    }
+
+    private void Update()
+    {
+        Debug.Log("Current Resolution: " + Screen.width + "x" + Screen.height);
     }
 
     void UpdateConsoleText()
     {
         consoleText.text = string.Join("\n", logMessages);
     }
+    
 }

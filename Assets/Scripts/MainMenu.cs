@@ -27,7 +27,6 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         cameraAnimator.SetTrigger("StartAnimation");
-        Screen.SetResolution(1280, 720, true);
 
         StartCoroutine(FadeOut());
     }
