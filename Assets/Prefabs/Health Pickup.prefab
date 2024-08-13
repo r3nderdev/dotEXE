@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6127970272028281409}
   - component: {fileID: 3380579633134072715}
   m_Layer: 0
-  m_Name: Health
+  m_Name: Health Pickup
   m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
