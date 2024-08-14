@@ -1070,8 +1070,8 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -1106,13 +1106,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 1daa5a834babeca49aad070cc502314b, type: 2}
   whiteNoiseFrequency: 0
-  whiteNoiseLength: 0.1
+  whiteNoiseLength: 0
   screenJumpFrequency: 0
   screenJumpLength: 0.1
   screenJumpMinLevel: 0.1
   screenJumpMaxLevel: 0.9
   flickeringStrength: 0.003
-  flickeringCycle: 111.12
+  flickeringCycle: 32.99
   isSlippage: 0
   isSlippageNoise: 0
   slippageStrength: 10.62
@@ -1122,7 +1122,7 @@ MonoBehaviour:
   chromaticAberrationStrength: 0.002
   isChromaticAberration: 1
   isMultipleGhost: 0
-  multipleGhostStrength: -0.1
+  multipleGhostStrength: 0
   isScanline: 0
   isMonochrome: 0
   isLetterBox: 0

@@ -13505,6 +13505,14 @@ PrefabInstance:
       propertyPath: orientation
       value: 
       objectReference: {fileID: 782693218}
+    - target: {fileID: 1061789851493946972, guid: 3ba44a81ba1738b4bac1d461c22c4c73, type: 3}
+      propertyPath: pixelSizeX
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061789851493946972, guid: 3ba44a81ba1738b4bac1d461c22c4c73, type: 3}
+      propertyPath: pixelSizeY
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1061789851806681534, guid: 3ba44a81ba1738b4bac1d461c22c4c73, type: 3}
       propertyPath: m_BoundingSphereOverride.w
       value: 3.4028235e+38

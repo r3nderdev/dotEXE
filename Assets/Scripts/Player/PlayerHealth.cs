@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
@@ -68,7 +67,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 health += 10f;
                 health = Mathf.Clamp(health, 0, 100);
-                Debug.Log("Health: " + health);
+                //Debug.Log("Health: " + health);
 
                 UpdateVignette();
 
@@ -79,8 +78,6 @@ public class PlayerHealth : MonoBehaviour
 
                 StartCoroutine(DamageCheck());
             }
-
-
         }
     }
 
@@ -94,17 +91,15 @@ public class PlayerHealth : MonoBehaviour
         damageApplied = true;
     }
 
-
-
     private void UpdateHealth()
     {
         health -= damage;
         health = Mathf.Clamp(health, 0, 100);
-        Debug.Log("Health: " + health);
+        //Debug.Log("Health: " + health);
 
         UpdateVignette();
 
-        // ded
+        // Player Death
         if (health <= 0) Invoke(nameof(DestroyPlayer), .05f);
 
         StartCoroutine(DamageCheck());
@@ -112,7 +107,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void UpdateVignette()
     {
-        // vignette
+        // Vignette
         _vignette.enabled.Override(true);
         _vignette.intensity.Override((1 - health / 100) - 0.15f);
         _vignette.enabled.Override(true);
@@ -127,7 +122,6 @@ public class PlayerHealth : MonoBehaviour
 
     private void DestroyPlayer()
     {
-        Debug.Log("Player Dead");
         levelLoader.LoadNextLevel(0f, 0);
     }
 }
