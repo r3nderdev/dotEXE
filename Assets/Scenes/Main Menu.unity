@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useTargetFPS: 1
   targetFrameRate: 60
-  useResolution: 1
+  useResolution: 0
   width: 1280
   height: 720
 --- !u!4 &61020141
