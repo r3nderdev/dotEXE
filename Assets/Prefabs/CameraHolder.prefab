@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1061789851493946966}
   - component: {fileID: 1061789851493946961}
   - component: {fileID: 1061789851493946972}
+  - component: {fileID: 5286757175562634323}
   - component: {fileID: 1061789851493946973}
   - component: {fileID: 1061789851493946963}
   m_Layer: 8
@@ -127,7 +128,7 @@ MonoBehaviour:
   pixelSizeX: 5
   pixelSizeY: 5
   lockXY: 1
---- !u!114 &1061789851493946973
+--- !u!114 &5286757175562634323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,6 +136,27 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061789851493946965}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a94a69f2d7da342a773b626d92f6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ASCIIShader: {fileID: 4800000, guid: b7e1f60cf8855c248b048c310ed1ed03, type: 3}
+  CharTex: {fileID: 2800000, guid: 2f89d82842b4dc9418dec840cba0753a, type: 3}
+  tilesX: 384
+  tilesY: 216
+  charWidth: 20
+  charHeight: 20
+  charCount: 8
+  brightness: 0.5
+  monochromatic: 0
+--- !u!114 &1061789851493946973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061789851493946965}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbe347f49d2f8a04d913547329b97143, type: 3}
   m_Name: 
@@ -155,7 +177,7 @@ MonoBehaviour:
   slippageScrollSpeed: 33
   slippageSize: 11
   chromaticAberrationStrength: 0.005
-  isChromaticAberration: 1
+  isChromaticAberration: 0
   isMultipleGhost: 0
   multipleGhostStrength: 0
   isScanline: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1932149763160276485}
   - component: {fileID: 8211258379106659076}
   m_Layer: 0
-  m_Name: ImpactFX
+  m_Name: WhiteImpactFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -594,7 +594,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2448
+  m_VersionIndex: 2451
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -651,7 +651,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: f836684d68fc06c4dace8a52c044afff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -716,9 +716,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLaserDamage: 10
+  element: {fileID: 0}
   bossScript: {fileID: 7575051839317385109}
+  defaultMaterial: {fileID: 2100000, guid: 6491d369ec8864e45a27d5a4bef561a2, type: 2}
+  coreTransform: {fileID: 1556715721954533315}
   deadFX: {fileID: 2611568679726887732, guid: 7bc9f661b1982c240840228bde9d6b50, type: 3}
-  spawnPos: {fileID: 0}
 --- !u!1 &4901541921391055845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,7 +1210,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2407
+  m_VersionIndex: 2410
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1265,7 +1267,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: f836684d68fc06c4dace8a52c044afff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1330,9 +1332,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLaserDamage: 10
+  element: {fileID: 0}
   bossScript: {fileID: 7575051839317385109}
+  defaultMaterial: {fileID: 2100000, guid: 6491d369ec8864e45a27d5a4bef561a2, type: 2}
+  coreTransform: {fileID: 1556715721954533315}
   deadFX: {fileID: 2611568679726887732, guid: 7bc9f661b1982c240840228bde9d6b50, type: 3}
-  spawnPos: {fileID: 0}
 --- !u!1 &6261760717623373115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,21 +1385,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 600
-  waitTime: 6
-  blinkTime: 0.2
+  waitTime: 4
+  blinkTime: 0.5
   playerHealth: {fileID: 0}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
+  levelLoader: {fileID: 0}
   lineRenderer: {fileID: 3627043178170025948}
   shootPoint: {fileID: 1556715721954533315}
   rayCastMask:
     serializedVersion: 2
     m_Bits: 320
   _healthbar: {fileID: 0}
-  _deathParticles: {fileID: 0}
-  timeBetweenAttacks: 5
-  attackRange: 113
+  healthbarObject: {fileID: 0}
+  deathFX: {fileID: 2611568679726887732, guid: ee0c26af546d62945b8591462bd97c22, type: 3}
+  timeBetweenAttacks: 6
+  BossImpactFX: {fileID: 2611568679726887732, guid: fdbcf83a37bb1e043bb4581d616b7bc7, type: 3}
+  core: {fileID: 405881210915942340}
+  pulseScale: 1.2
+  pulseDuration: 0.2
+  pulseUpDuration: 0.1
+  attackRange: 110
 --- !u!1 &7332964498657153370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,9 +1738,9 @@ MonoBehaviour:
       m_FlipV: 0
       m_SwapUV: 0
       m_Fill: 1
-      m_Scale: {x: 1, y: 1}
-      m_Offset: {x: 0, y: 0}
-      m_Rotation: 0
+      m_Scale: {x: 0.99999994, y: 1.0000002}
+      m_Offset: {x: 14.583139, y: 21.000008}
+      m_Rotation: 270
       m_Anchor: 9
     m_Material: {fileID: 0}
     m_SubmeshIndex: 0
@@ -1929,18 +1940,18 @@ MonoBehaviour:
   - {x: 12.5, y: 0}
   - {x: 7.889491, y: 4.555}
   - {x: 9.11, y: 0}
-  - {x: -10.825317, y: 6.25}
-  - {x: -6.2499995, y: 10.825318}
-  - {x: -7.889491, y: 4.555}
-  - {x: -4.555, y: 7.889492}
+  - {x: 0.91675216, y: 0.0005518198}
+  - {x: 0.05757764, y: 0.00029185414}
+  - {x: 0.80012167, y: 0.45229998}
+  - {x: 0.17395535, y: 0.45211062}
   - {x: 6.2499995, y: 10.825318}
   - {x: 10.825317, y: 6.25}
   - {x: 4.555, y: 7.889492}
   - {x: 7.889491, y: 4.555}
-  - {x: -6.2499995, y: 10.825318}
-  - {x: 0.00000054639236, y: 12.5}
-  - {x: -4.555, y: 7.889492}
-  - {x: 0.00000039821074, y: 9.11}
+  - {x: 0.9174181, y: -0.0014798045}
+  - {x: 0.06160605, y: 0.0010272413}
+  - {x: 0.80258995, y: 0.4492816}
+  - {x: 0.17887408, y: 0.45110875}
   - {x: -0.00000054639236, y: 12.5}
   - {x: 6.2499995, y: 10.825318}
   - {x: -0.00000039821074, y: 9.11}
@@ -1988,18 +1999,18 @@ MonoBehaviour:
   - {x: 0.000000032182996, y: 1, z: 0.00000007629396, w: -1}
   - {x: 0.000000032182996, y: 1, z: 0.00000007629396, w: -1}
   - {x: 0, y: 1, z: 0, w: -1}
-  - {x: -0.00000010297023, y: -1, z: 0, w: -1}
-  - {x: -0.0000000061554504, y: -1, z: 0, w: -1}
-  - {x: -0.0000000061554504, y: -1, z: 0, w: -1}
-  - {x: 0.00000009065929, y: -1, z: 0, w: -1}
+  - {x: -0.7069009, y: 0.7073126, z: 0, w: -1}
+  - {x: -0.706901, y: 0.7073126, z: 0, w: -1}
+  - {x: -0.706901, y: 0.7073126, z: 0, w: -1}
+  - {x: -0.7069011, y: 0.70731246, z: 0, w: -1}
   - {x: 0, y: 1, z: 0, w: -1}
   - {x: 0.00000002531403, y: 1, z: 0, w: -1}
   - {x: 0.00000002531403, y: 1, z: 0, w: -1}
   - {x: 0.000000050628064, y: 1, z: 0, w: -1}
-  - {x: 0.00000013214502, y: -1, z: -0.00000026429004, w: -1}
-  - {x: 0.000000028382821, y: -1, z: -0.000000056765675, w: -1}
-  - {x: 0.000000028382821, y: -1, z: -0.000000056765675, w: -1}
-  - {x: -0.000000075379354, y: -1, z: 0.00000015075872, w: -1}
+  - {x: -0.2615388, y: 0.965193, z: 0.00000029499853, w: -1}
+  - {x: -0.26153874, y: 0.96519303, z: 0.00000014831966, w: -1}
+  - {x: -0.26153874, y: 0.96519303, z: 0.00000014831966, w: -1}
+  - {x: -0.26153865, y: 0.96519303, z: 0.0000000016407569, w: -1}
   - {x: -0.000000077208504, y: 1, z: 0.00000015441701, w: -1}
   - {x: -0.000000038604252, y: 1, z: 0.0000000772085, w: -1}
   - {x: -0.000000038604252, y: 1, z: 0.0000000772085, w: -1}
@@ -2021,11 +2032,19 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2465
+  m_VersionIndex: 2617
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 0a000000
+  m_SelectedEdges:
+  - a: 40
+    b: 41
+  - a: 42
+    b: 40
+  - a: 41
+    b: 43
+  - a: 43
+    b: 42
+  m_SelectedVertices: 28000000290000002a0000002b000000
 --- !u!114 &332583746198509209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2078,7 +2097,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: f836684d68fc06c4dace8a52c044afff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2143,9 +2162,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLaserDamage: 10
+  element: {fileID: 0}
   bossScript: {fileID: 7575051839317385109}
+  defaultMaterial: {fileID: 2100000, guid: 6491d369ec8864e45a27d5a4bef561a2, type: 2}
+  coreTransform: {fileID: 1556715721954533315}
   deadFX: {fileID: 2611568679726887732, guid: 7bc9f661b1982c240840228bde9d6b50, type: 3}
-  spawnPos: {fileID: 0}
 --- !u!1 &8657342369723793879
 GameObject:
   m_ObjectHideFlags: 0
