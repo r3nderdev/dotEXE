@@ -192,7 +192,7 @@ MonoBehaviour:
   dashFov: 105
   useCameraForward: 0
   allowAllDirections: 1
-  disableGravity: 0
+  disableGravity: 1
   resetVel: 1
   dashCd: 1.5
   dashKey: 324
