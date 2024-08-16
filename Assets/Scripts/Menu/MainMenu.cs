@@ -1,22 +1,37 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
-
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Animator cameraAnimator;
-    [SerializeField] private TMP_Text[] buttonTexts;
-    [SerializeField] private LevelLoader levelLoader;
+    [SerializeField] private Button[] menuButtons;
+    private TMP_Text[] buttonTexts;
 
+    [SerializeField] private GameObject computerUI;
 
-    [Header("Values")]
-    [SerializeField] private float levelloadDelay;
+    [Header("Delay")]
+    [SerializeField] private float animationDelay = 4f;
+
     private void Start()
     {
+        buttonTexts = new TMP_Text[3];
+        int index = 0;
 
+        // Populate the buttonTexts array
+        foreach (Button button in menuButtons)
+        {
+            TMP_Text[] texts = button.GetComponentsInChildren<TMP_Text>();
+            foreach (TMP_Text text in texts)
+            {
+                buttonTexts[index] = text;
+                index++;
+            }
+        }
+
+        // Set text color to fully visible
         foreach (TMP_Text text in buttonTexts)
         {
             Color textColor = text.color;
@@ -25,17 +40,19 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-
     public void PlayGame()
     {
         cameraAnimator.SetTrigger("StartAnimation");
-
         StartCoroutine(FadeOut());
     }
 
-
     private IEnumerator FadeOut()
     {
+        foreach (Button button in menuButtons)
+        {
+            button.interactable = false;
+        }
+
         // Fade UI
         float elapsedTime = 0f;
 
@@ -49,16 +66,19 @@ public class MainMenu : MonoBehaviour
                 textColor.a = Mathf.Lerp(1, 0, elapsedTime / 0.7f);
                 text.color = textColor;
             }
-
             yield return null;
         }
 
-        yield return new WaitForSeconds(levelloadDelay);
+        yield return new WaitForSeconds(animationDelay);
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        //levelLoader.LoadNextLevel(levelloadDelay, 1);
+        foreach (Button button in menuButtons)
+        {
+            button.transform.parent.gameObject.SetActive(false);
+        }
+
+        // Activate Computer UI
+        computerUI.SetActive(true);
     }
-
 
     public void QuitGame()
     {
