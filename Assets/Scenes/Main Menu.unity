@@ -3234,7 +3234,7 @@ MonoBehaviour:
   - {fileID: 1793567963}
   - {fileID: 1525396482}
   levelLoader: {fileID: 7423992307976579605}
-  levelloadDelay: 1.2
+  levelloadDelay: 4
 --- !u!1 &780004080
 GameObject:
   m_ObjectHideFlags: 0

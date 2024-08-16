@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
+
 
 public class MainMenu : MonoBehaviour
 {
@@ -32,9 +34,9 @@ public class MainMenu : MonoBehaviour
     }
 
 
-    // UI Fade
     private IEnumerator FadeOut()
     {
+        // Fade UI
         float elapsedTime = 0f;
 
         while (elapsedTime < 0.7f)
@@ -51,7 +53,10 @@ public class MainMenu : MonoBehaviour
             yield return null;
         }
 
-        levelLoader.LoadNextLevel(levelloadDelay, 1);
+        yield return new WaitForSeconds(levelloadDelay);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //levelLoader.LoadNextLevel(levelloadDelay, 1);
     }
 
 
