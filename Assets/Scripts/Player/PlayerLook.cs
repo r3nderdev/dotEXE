@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
@@ -8,17 +6,24 @@ public class PlayerLook : MonoBehaviour
     public static float mouseSensitivity = 50f;
 
     [SerializeField] private Transform orientation;
+    [SerializeField] private Transform cameraPosition;
 
     private float xRotation;
     private float yRotation;
 
+    private Camera cam;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        cam = Camera.main;
     }
 
     private void Update()
     {
+        // Move camera position
+        transform.position = cameraPosition.position;
+
         // Get raw mouse input
         float mouseX = Input.GetAxisRaw("Mouse X");
         float mouseY = Input.GetAxisRaw("Mouse Y");
@@ -41,6 +46,6 @@ public class PlayerLook : MonoBehaviour
 
     public void DoFow(float endValue)
     {
-        GetComponent<Camera>().DOFieldOfView(endValue, 0.25f);
+        cam.DOFieldOfView(endValue, 0.25f);
     }
 }

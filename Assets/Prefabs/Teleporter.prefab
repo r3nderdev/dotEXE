@@ -1018,9 +1018,9 @@ MonoBehaviour:
   - {x: 0.42187506, y: 0.36816967}
   - {x: 0.50000006, y: 0.50348616}
   - {x: 0.34375006, y: 0.50348616}
-  - {x: 0.65096885, y: 0.24513182}
-  - {x: 0.5, y: 0.50661755}
-  - {x: 0.8019377, y: 0.50661755}
+  - {x: 0.47245955, y: 0.26280594}
+  - {x: 0.3214907, y: 0.72401}
+  - {x: 0.6234284, y: 0.72401}
   - {x: 0.31945798, y: 0.9219741}
   - {x: 0.680542, y: 0.9219741}
   - {x: 0.3449905, y: 0.8777506}
@@ -1285,7 +1285,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1902
+  m_VersionIndex: 1911
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

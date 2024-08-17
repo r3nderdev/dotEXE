@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using EZCameraShake;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -93,6 +94,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void UpdateHealth()
     {
+        CameraShaker.Instance.ShakeOnce(0.5f, 1f, .1f, .5f);
+
         health -= damage;
         health = Mathf.Clamp(health, 0, 100);
         //Debug.Log("Health: " + health);

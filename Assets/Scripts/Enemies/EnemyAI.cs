@@ -98,7 +98,7 @@ public class EnemyAI : MonoBehaviour
 
     private void DestroyEnemy()
     {
-        //CameraShaker.Instance.ShakeOnce(1f, 2f, .1f, 1f);
+        CameraShaker.Instance.ShakeOnce(1f, 2f, .1f, 1f);
         SoundManager.PlaySound(SoundType.DEATH, 0.2f);
         PlayerHealth.killCount++;
         Instantiate(_deathParticles, transform.position, Quaternion.identity);

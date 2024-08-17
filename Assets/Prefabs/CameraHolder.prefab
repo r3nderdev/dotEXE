@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 1061789851493946960}
   - component: {fileID: 1061789851493946967}
   - component: {fileID: 1061789851493946966}
-  - component: {fileID: 1061789851493946961}
   - component: {fileID: 1061789851493946972}
   - component: {fileID: 5286757175562634323}
   - component: {fileID: 1061789851493946973}
   - component: {fileID: 1061789851493946963}
+  - component: {fileID: 8366247073478191077}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -99,19 +99,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061789851493946965}
   m_Enabled: 1
---- !u!114 &1061789851493946961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061789851493946965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7de4f777022e9834682925f558303a92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orientation: {fileID: 0}
 --- !u!114 &1061789851493946972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +240,22 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &8366247073478191077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061789851493946965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab8353b5ebd32545867da143199a814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
+  DefaultRotInfluence: {x: 1, y: 1, z: 1}
+  RestPositionOffset: {x: 0, y: 0, z: 0}
+  RestRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1061789851620551252
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,8 +300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08d89236cca3be046a1902cf7c1c0592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laser: {fileID: 6897469527560566331, guid: f1912ac532a535a4883d7a0c4b7d0c8a, type: 3}
-  laserSpeed: 35
+  laser: {fileID: 2656599861010974855, guid: 98ba9b03a5535bb43ac2bde66fad1b72, type: 3}
+  laserSpeed: 45
 --- !u!1 &1061789851806681533
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1061789851840801610}
-  - component: {fileID: 1061789851840801611}
+  - component: {fileID: 7303016852146711301}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -426,7 +429,7 @@ Transform:
   - {fileID: 1061789851493946960}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1061789851840801611
+--- !u!114 &7303016852146711301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -435,7 +438,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1061789851840801609}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4edc9ef75b253d844883bd5160a20963, type: 3}
+  m_Script: {fileID: 11500000, guid: 7de4f777022e9834682925f558303a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  orientation: {fileID: 0}
   cameraPosition: {fileID: 0}

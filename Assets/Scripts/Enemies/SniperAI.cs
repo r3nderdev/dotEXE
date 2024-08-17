@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using EZCameraShake;
 public class SniperAI : MonoBehaviour
 {
     [Header("Stuff")]
