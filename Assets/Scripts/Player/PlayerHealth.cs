@@ -94,7 +94,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void UpdateHealth()
     {
-        CameraShaker.Instance.ShakeOnce(0.5f, 1f, .1f, .5f);
+        CameraShaker.Instance.ShakeOnce(2.4f, 2f, .1f, .5f);
 
         health -= damage;
         health = Mathf.Clamp(health, 0, 100);

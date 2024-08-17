@@ -45,7 +45,7 @@ public class BossTarget : MonoBehaviour
 
         if (health <= 0)
         {
-            //CameraShaker.Instance.ShakeOnce(3f, 4f, .1f, 1f);
+            CameraShaker.Instance.ShakeOnce(6f, 5f, .1f, 3f);
             SoundManager.PlaySound(SoundType.BOSS_EXPLOSION, 0.7f);
             // Spawn some sick particles
             Instantiate(deadFX, coreTransform.position, Quaternion.identity);

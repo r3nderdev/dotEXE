@@ -132,7 +132,7 @@ public class BossAI : MonoBehaviour
         if (Physics.Raycast(shootPoint.position, directionToPlayer, out RaycastHit hit, Mathf.Infinity, rayCastMask))
         {
 
-            CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1.2f);
+            CameraShaker.Instance.ShakeOnce(5f, 3f, .1f, 1.8f);
             Instantiate(BossImpactFX,hit.point,Quaternion.identity);
 
             if (hit.transform == player)
@@ -194,7 +194,7 @@ private void ResetAttack()
 
     private void DestroyEnemy()
     {
-        CameraShaker.Instance.ShakeOnce(5f, 5f, .1f, 1.2f);
+        CameraShaker.Instance.ShakeOnce(10f, 6f, .1f, 4f);
 
         SoundManager.PlaySound(SoundType.BOSS_EXPLOSION, 1f);
 
