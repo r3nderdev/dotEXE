@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using UnityStandardAssets.ImageEffects;
 
 public class SettingsMenu : MonoBehaviour
 
@@ -13,15 +11,17 @@ public class SettingsMenu : MonoBehaviour
 
     [Header("Pixelation Effect")]
     [SerializeField] private Pixelate pixelEffect;
-    [SerializeField] private Image toggleBackground;
-    [SerializeField] private Color white;
-    [SerializeField] private Color black;
+    [SerializeField] private Image pixelToggleImage;
 
-    [Header("Game Sliders")]
+    [Header("ASCII Effect")]
+    [SerializeField] private ASCIIRendering asciiEffect;
+    [SerializeField] private Image asciiToggleImage;
+
+
+
+    [Header("Settings Sliders")]
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private Slider sensitivitySlider;
-
-    
 
     private void Start()
     {
@@ -35,9 +35,6 @@ public class SettingsMenu : MonoBehaviour
         }
 
         sensitivitySlider.value = sens;
-
-        white.a = 1f;
-        black.a = 1f;
     }
 
     public void SetSensitivity(float sens)
@@ -57,14 +54,32 @@ public class SettingsMenu : MonoBehaviour
         {
             // Turn pixel on
             pixelEffect.enabled = true;
-            toggleBackground.color = white;
+            pixelToggleImage.color = Color.white;
 
         }
         if (!pixelation)
         {
             // Turn pixel off
             pixelEffect.enabled = false;
-            toggleBackground.color = black;
+            pixelToggleImage.color = Color.black;
+        }
+    }
+
+    public void SetASCII(bool ascii)
+    {
+        // Toggling ASCII Effect
+        if (ascii)
+        {
+            // Turn ascii effect on
+            asciiEffect.enabled = true;
+            asciiToggleImage.color = Color.white;
+
+        }
+        if (!ascii)
+        {
+            // Turn ascii off
+            asciiEffect.enabled = false;
+            asciiToggleImage.color = Color.black;
         }
     }
 }
