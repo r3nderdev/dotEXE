@@ -5843,7 +5843,7 @@ GameObject:
   - component: {fileID: 1265730418}
   - component: {fileID: 1265730420}
   m_Layer: 0
-  m_Name: FlashBang
+  m_Name: White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7244,12 +7244,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2982bac8caae0e74a9953f87369ba4fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useKills: 0
+  killTrigger: 0
   killsToOpen: 0
+  dialogueTrigger: 1
   indexToOpen: 1
+  colliderTrigger: 0
   openPosition: 7.1
   openSpeed: 0.7
-  dialogue: {fileID: 2258760819565158027}
+  dialogueScript: {fileID: 2258760819565158027}
   strings:
   - 'Admin: The whole group is very impressed.'
   - 'Admin: Welcome to the club.'

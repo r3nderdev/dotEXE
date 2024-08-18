@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2528379576404407997}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Dialogue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,7 +344,7 @@ MonoBehaviour:
   colliderTrigger: 0
   openPosition: 7
   openSpeed: 2
-  dialogue: {fileID: 0}
+  dialogueScript: {fileID: 0}
   strings: []
 --- !u!33 &8696568863242238100
 MeshFilter:

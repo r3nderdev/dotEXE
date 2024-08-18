@@ -31,7 +31,7 @@ public class DoorOpen : MonoBehaviour
     [Range(0, 15)]
     [SerializeField] private float openSpeed = 2f;
 
-    [Header("Dialogue On Open")]
+    [Header("Dialogue")]
     [Tooltip("Reference to the dialogue script.")]
     [SerializeField] private Dialogue dialogueScript;
 

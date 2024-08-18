@@ -68405,6 +68405,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a94a69f2d7da342a773b626d92f6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1061789852174940966 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7303016852146711301, guid: 3ba44a81ba1738b4bac1d461c22c4c73, type: 3}
+  m_PrefabInstance: {fileID: 1061789852174940964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de4f777022e9834682925f558303a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2258760819565158026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68836,7 +68847,7 @@ PrefabInstance:
     - target: {fileID: 7765125202807022887, guid: 8fcb0f62132be3448913acd069429d87, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1061789852174940966}
     - target: {fileID: 7765125202807022887, guid: 8fcb0f62132be3448913acd069429d87, type: 3}
       propertyPath: slider
       value: 

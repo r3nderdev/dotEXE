@@ -10594,9 +10594,37 @@ PrefabInstance:
       propertyPath: dialogue
       value: 
       objectReference: {fileID: 2258760819565158027}
+    - target: {fileID: 369226519537146815, guid: d81ac07e50a448547a9c4c797497a07b, type: 3}
+      propertyPath: killTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 369226519537146815, guid: d81ac07e50a448547a9c4c797497a07b, type: 3}
+      propertyPath: killsToOpen
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 369226519537146815, guid: d81ac07e50a448547a9c4c797497a07b, type: 3}
+      propertyPath: dialogueScript
+      value: 
+      objectReference: {fileID: 2258760819565158027}
+    - target: {fileID: 369226519537146815, guid: d81ac07e50a448547a9c4c797497a07b, type: 3}
+      propertyPath: strings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 369226519537146815, guid: d81ac07e50a448547a9c4c797497a07b, type: 3}
+      propertyPath: strings.Array.data[0]
+      value: 'Admin: Nice! I managed to hack the door open.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 369226519537146815, guid: d81ac07e50a448547a9c4c797497a07b, type: 3}
+      propertyPath: strings.Array.data[1]
+      value: 'Admin: Use the teleporter inside.'
+      objectReference: {fileID: 0}
     - target: {fileID: 2014570723019521372, guid: d81ac07e50a448547a9c4c797497a07b, type: 3}
       propertyPath: m_Name
       value: Exit Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 2528379576404407997, guid: d81ac07e50a448547a9c4c797497a07b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3365289852119839197, guid: d81ac07e50a448547a9c4c797497a07b, type: 3}
       propertyPath: m_Mesh
