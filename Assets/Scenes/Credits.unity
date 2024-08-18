@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 439375077}
   - component: {fileID: 439375076}
   m_Layer: 5
-  m_Name: Attribution
+  m_Name: Attribution Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 590397115}
   - component: {fileID: 590397114}
   m_Layer: 5
-  m_Name: freesound
+  m_Name: Freesound Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 695152328}
   - component: {fileID: 695152327}
   m_Layer: 5
-  m_Name: 'Extra Assets from:'
+  m_Name: Extra Assets Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1207,7 +1207,7 @@ GameObject:
   - component: {fileID: 905142932}
   - component: {fileID: 905142931}
   m_Layer: 5
-  m_Name: Developer
+  m_Name: Developed by Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1341,7 +1341,7 @@ GameObject:
   - component: {fileID: 1476558837}
   - component: {fileID: 1476558836}
   m_Layer: 5
-  m_Name: poly
+  m_Name: poly.pizza Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
