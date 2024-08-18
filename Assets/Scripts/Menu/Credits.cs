@@ -14,6 +14,6 @@ public class Credits : MonoBehaviour
         Time.timeScale = 1f;
         PauseMenu.GameIsPaused = false;
 
-        levelLoader.LoadNextLevel(0f, -6);
+        levelLoader.LoadNextLevel(0f, -5);
     }
 }
