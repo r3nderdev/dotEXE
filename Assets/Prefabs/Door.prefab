@@ -341,8 +341,8 @@ MonoBehaviour:
   killsToOpen: 0
   dialogueTrigger: 0
   indexToOpen: 0
-  colliderTrigger: 1
-  openPosition: 7.1
+  colliderTrigger: 0
+  openPosition: 7
   openSpeed: 2
   dialogue: {fileID: 0}
   strings: []
