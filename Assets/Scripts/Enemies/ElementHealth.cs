@@ -1,3 +1,4 @@
+using EZCameraShake;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -48,6 +49,7 @@ public class ElementHealth : MonoBehaviour
             }
 
             SoundManager.PlaySound(SoundType.DEATH, 0.4f);
+            CameraShaker.Instance.ShakeOnce(4f, 4f, .1f, 2f);
             Instantiate(deadFX, transform.position,Quaternion.identity);
             Destroy(gameObject);
         }
