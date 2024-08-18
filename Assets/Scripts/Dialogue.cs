@@ -34,12 +34,15 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue(string[] strings)
     {
-        textComponent.text = string.Empty;
-        lines = strings;
+        if (strings.Length > 0)
+        {
+            textComponent.text = string.Empty;
+            lines = strings;
 
-        index = 0;
+            index = 0;
 
-        StartCoroutine(TypeLine());
+            StartCoroutine(TypeLine());
+        }
     }
 
     IEnumerator TypeLine()
