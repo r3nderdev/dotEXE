@@ -4,9 +4,8 @@ using UnityEngine.UI;
 using UnityStandardAssets.ImageEffects;
 
 public class SettingsMenu : MonoBehaviour
-
 {
-    [Header("Audio")]
+    [Header("Audio Mixer")]
     [SerializeField] private AudioMixer audioMixer;
 
     [Header("Pixelation Effect")]
@@ -17,17 +16,28 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private ASCIIRendering asciiEffect;
     [SerializeField] private Image asciiToggleImage;
 
-
-
     [Header("Settings Sliders")]
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private Slider sensitivitySlider;
 
+    private float volumeValue;
+
+    private void Awake()
+    {
+        if (pixelEffect != null)
+        {
+            if (PlayerPrefs.HasKey("Pixelation")) SetPixelation(bool.Parse(PlayerPrefs.GetString("Pixelation")));
+        }
+
+        if (asciiEffect != null)
+        {
+            if (PlayerPrefs.HasKey("ASCII")) SetASCII(bool.Parse(PlayerPrefs.GetString("ASCII")));
+        }
+    }
+
     private void Start()
     {
         float sens = PlayerLook.mouseSensitivity;
-
-        float volumeValue;
 
         if (audioMixer.GetFloat("Volume", out volumeValue))
         {
@@ -49,6 +59,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetPixelation (bool pixelation)
     {
+
         // Toggling Pixelation Effect
         if (pixelation)
         {
@@ -56,12 +67,15 @@ public class SettingsMenu : MonoBehaviour
             pixelEffect.enabled = true;
             pixelToggleImage.color = Color.white;
 
+            PlayerPrefs.SetString("Pixelation", "True");
         }
         if (!pixelation)
         {
             // Turn pixel off
             pixelEffect.enabled = false;
             pixelToggleImage.color = Color.black;
+
+            PlayerPrefs.SetString("Pixelation", "False");
         }
     }
 
@@ -74,12 +88,15 @@ public class SettingsMenu : MonoBehaviour
             asciiEffect.enabled = true;
             asciiToggleImage.color = Color.white;
 
+            PlayerPrefs.SetString("ASCII", "True");
         }
         if (!ascii)
         {
             // Turn ascii off
             asciiEffect.enabled = false;
             asciiToggleImage.color = Color.black;
+
+            PlayerPrefs.SetString("ASCII", "False");
         }
     }
 }
