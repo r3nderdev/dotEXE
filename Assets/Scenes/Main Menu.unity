@@ -7461,6 +7461,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1724783560}
+  - {fileID: 2073374403}
   - {fileID: 662443711}
   - {fileID: 2082113762}
   - {fileID: 537677371}
@@ -12593,8 +12594,7 @@ Transform:
   m_LocalPosition: {x: -2.44, y: 3.89, z: 4.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2073374403}
+  m_Children: []
   m_Father: {fileID: 1628291629}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1753323351
@@ -14026,6 +14026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2073374403}
   - component: {fileID: 2073374402}
+  - component: {fileID: 2073374404}
   m_Layer: 0
   m_Name: Rain Sound
   m_TagString: Untagged
@@ -14045,7 +14046,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: b3729d6478035bf48a1f6f4468901a1d, type: 2}
   m_audioClip: {fileID: 8300000, guid: 94d3d5b8f6f38b7419f3e698ccc746f5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.689
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -14138,12 +14139,28 @@ Transform:
   m_GameObject: {fileID: 2073374401}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: -4.02, z: -4.33}
+  m_LocalPosition: {x: -1.67, y: 1.15, z: 2.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1724783560}
+  m_Father: {fileID: 1628291629}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2073374404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073374401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60dfa794b6176ac40baddd4479ff2a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 2073374402}
+  startVolume: 0
+  endVolume: 0.7
+  fadeDuration: 1
 --- !u!1 &2075812832
 GameObject:
   m_ObjectHideFlags: 0
