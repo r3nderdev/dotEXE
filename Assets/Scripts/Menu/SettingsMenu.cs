@@ -37,19 +37,18 @@ public class SettingsMenu : MonoBehaviour
 
     private void Start()
     {
-        float sens = PlayerLook.mouseSensitivity;
+        float sens = PlayerLook.sensitivity;
+        sensitivitySlider.value = sens;
 
         if (audioMixer.GetFloat("Volume", out volumeValue))
         {
             volumeSlider.value = volumeValue;
         }
-
-        sensitivitySlider.value = sens;
     }
 
     public void SetSensitivity(float sens)
     {
-        PlayerLook.mouseSensitivity = sens;
+        PlayerLook.sensitivity = sens;
     }
 
     public void SetVolume (float volume)

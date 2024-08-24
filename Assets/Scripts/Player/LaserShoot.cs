@@ -1,29 +1,48 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class LaserShoot : MonoBehaviour
 {
     [SerializeField] private GameObject laser;
-    [SerializeField] private float laserSpeed;
-    private Camera _cam;
+    [SerializeField] private float laserSpeed = 60;
+    [SerializeField] private float cooldown = 0.05f;
 
-    private void Awake()
+    [SerializeField] private InputAction shootAction;
+
+    private bool canShoot = true;
+
+    private void OnEnable()
     {
-        _cam = Camera.main;
+        shootAction.Enable();
+        shootAction.performed += OnShoot;
     }
 
-    void Update()
+    private void OnDisable()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && PauseMenu.GameIsPaused == false)
+        shootAction.Disable();
+        shootAction.performed -= OnShoot;
+    }
+
+    private void OnShoot(InputAction.CallbackContext context)
+    {
+        if (canShoot && !PauseMenu.GameIsPaused)
         {
-            SoundManager.PlaySound(SoundType.LASER, 0.1f);
-            LaserPewPew();
+            canShoot = false;
+            StartCoroutine(ShootLaser());
         }
     }
-    void LaserPewPew()
+
+    private IEnumerator ShootLaser()
     {
-        
+        SoundManager.PlaySound(SoundType.LASER, 0.1f);
+
         Rigidbody laserRB = Instantiate(laser, transform.position, transform.rotation).GetComponent<Rigidbody>();
         laserRB.AddForce(transform.forward * laserSpeed, ForceMode.Impulse);
+
         Destroy(laserRB.gameObject, 5f);
+
+        yield return new WaitForSeconds(cooldown);
+        canShoot = true;
     }
 }

@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using DG.Tweening;
 
 public class PlayerLook : MonoBehaviour
 {
-    public static float mouseSensitivity = 50f;
+    public static float sensitivity = 5f;
 
+    [SerializeField] private InputAction lookAction;
     [SerializeField] private Transform orientation;
     [SerializeField] private Transform cameraPosition;
 
@@ -12,6 +14,18 @@ public class PlayerLook : MonoBehaviour
     private float yRotation;
 
     private Camera cam;
+
+    private void OnEnable()
+    {
+        lookAction.performed += OnLook;
+        lookAction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        lookAction.performed -= OnLook;
+        lookAction.Disable();
+    }
 
     private void Start()
     {
@@ -21,20 +35,19 @@ public class PlayerLook : MonoBehaviour
 
     private void Update()
     {
-        // Move camera position
         transform.position = cameraPosition.position;
+    }
 
-        // Get raw mouse input
-        float mouseX = Input.GetAxisRaw("Mouse X");
-        float mouseY = Input.GetAxisRaw("Mouse Y");
+    private void OnLook(InputAction.CallbackContext context)
+    {
+        Vector2 input = context.ReadValue<Vector2>();
 
-        // Scale mouse input by sensitivity
-        mouseX *= mouseSensitivity;
-        mouseY *= mouseSensitivity;
+        float mouseX = input.x * sensitivity;
+        float mouseY = input.y * sensitivity;
 
-        // Adjust rotation
-        yRotation += mouseX * Time.deltaTime; // Use Time.deltaTime only for rotation application
-        xRotation -= mouseY * Time.deltaTime; // Use Time.deltaTime only for rotation application
+        // Camera Rotation
+        yRotation += mouseX * Time.deltaTime;
+        xRotation -= mouseY * Time.deltaTime;
 
         // Clamp vertical rotation
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);

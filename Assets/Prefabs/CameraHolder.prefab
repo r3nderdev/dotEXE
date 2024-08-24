@@ -301,7 +301,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 2656599861010974855, guid: 98ba9b03a5535bb43ac2bde66fad1b72, type: 3}
-  laserSpeed: 45
+  laserSpeed: 60
+  cooldown: 0.05
+  shootAction:
+    m_Name: Shoot
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2dcc2742-2b65-4991-af10-31b95c51fe8f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 7a1082d5-8c78-44b3-bb5e-7462c93807c4
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shoot
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &1061789851806681533
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,5 +459,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de4f777022e9834682925f558303a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lookAction:
+    m_Name: Look
+    m_Type: 0
+    m_ExpectedControlType: Vector2
+    m_Id: b73ccbc2-c20a-45c9-90d3-31813bea860d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 1e53e7c1-0c68-4c70-b92b-f290be30d226
+      m_Path: <Mouse>/delta
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Look
+      m_Flags: 0
+    m_Flags: 0
   orientation: {fileID: 0}
   cameraPosition: {fileID: 0}
