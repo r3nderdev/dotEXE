@@ -31831,7 +31831,7 @@ GameObject:
   - component: {fileID: 435545514}
   - component: {fileID: 435545513}
   - component: {fileID: 435545519}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Middle Tube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42018,7 +42018,7 @@ GameObject:
   - component: {fileID: 759059252}
   - component: {fileID: 759059251}
   - component: {fileID: 759059250}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottom Cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44575,7 +44575,7 @@ GameObject:
   - component: {fileID: 910370342}
   - component: {fileID: 910370341}
   - component: {fileID: 910370340}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Top Cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}

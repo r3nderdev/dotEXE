@@ -67,7 +67,7 @@ public class EnemyAI : MonoBehaviour
 
         transform.LookAt(player);
 
-        if (!alreadyAttacked)
+        if (!alreadyAttacked && !Physics.Raycast(transform.position, transform.forward, attackRange, whatIsGround))
         {
             // Projectile
 
