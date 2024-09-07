@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 using UnityStandardAssets.ImageEffects;
 
@@ -15,6 +16,9 @@ public class SettingsMenu : MonoBehaviour
     [Header("ASCII Effect")]
     [SerializeField] private ASCIIRendering asciiEffect;
     [SerializeField] private Image asciiToggleImage;
+
+    [Header("Grain Effect")]
+    // Not done yet
 
     [Header("Settings Sliders")]
     [SerializeField] private Slider volumeSlider;
@@ -86,6 +90,7 @@ public class SettingsMenu : MonoBehaviour
             // Turn ascii effect on
             asciiEffect.enabled = true;
             asciiToggleImage.color = Color.white;
+            //grainEffect.active = false;
 
             PlayerPrefs.SetString("ASCII", "True");
         }
@@ -94,6 +99,8 @@ public class SettingsMenu : MonoBehaviour
             // Turn ascii off
             asciiEffect.enabled = false;
             asciiToggleImage.color = Color.black;
+            //grainEffect.active = true;
+
 
             PlayerPrefs.SetString("ASCII", "False");
         }
